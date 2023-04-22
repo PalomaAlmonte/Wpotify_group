@@ -55,7 +55,7 @@ public class WelcomePage extends JFrame {
 
         icon = new JLabel();
         icon.setHorizontalAlignment(SwingConstants.CENTER);
-        ImageIcon JpotifyIcon = new ImageIcon("/Users/apple/Desktop/JpotifyWhite.png");
+        ImageIcon JpotifyIcon = new ImageIcon("JpotifyWhite.png");
         Image image = JpotifyIcon.getImage(); // transform it
         Image newimg = image.getScaledInstance(38, 38, java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         JpotifyIcon = new ImageIcon(newimg);

@@ -115,7 +115,7 @@ public class LibraryPart extends JPanel {
 
         icon = new JLabel();
         icon.setHorizontalAlignment(SwingConstants.CENTER);
-        ImageIcon JpotifyIcon = new ImageIcon("/Users/apple/Desktop/JpotifyIcon.png");
+        ImageIcon JpotifyIcon = new ImageIcon("JpotifyIcon.png");
         Image image = JpotifyIcon.getImage(); // transform it
         Image newimg = image.getScaledInstance(18, 18, java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         JpotifyIcon = new ImageIcon(newimg);
