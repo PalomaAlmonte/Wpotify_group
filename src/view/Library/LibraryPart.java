@@ -166,6 +166,13 @@ public class LibraryPart extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 fileChooserBtn.setBackground(getBackground());
+                // added part
+                try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
                 /*try {
                     for (UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
                         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); //set Look and Feel to Windows
