@@ -65,13 +65,15 @@ public class LibraryPart extends JPanel {
     public LibraryPart(String user, PlayerPart playerPart) throws IOException {
 
         super();
-        this.setPreferredSize(new Dimension(102, 750));
+        this.setPreferredSize(new Dimension(150, 750));
         setSize(400, 400);
-        this.setBackground(new Color(24, 24, 24));
+        this.setBackground(new Color(0, 0, 0));
         setLayout(new GridLayout(19, 1));
-        foreground = new Color(179, 179, 179);
-        pressedBackground = new Color(45, 45, 45);
+        foreground = new Color(255, 255, 255);
+        pressedBackground = new Color(0, 0, 0);
         this.playerPart = playerPart;
+        //trying to fix the border issue
+
 
         username = user;
         if (new File(username + "/songs/").list().length > 0) {
@@ -128,7 +130,7 @@ public class LibraryPart extends JPanel {
 
 
         jSeparator = new JSeparator(SwingConstants.HORIZONTAL);
-        jSeparator.setForeground(new Color(39, 39, 39));
+        jSeparator.setForeground(new Color(0, 0,0));
         add(jSeparator);
 
 
@@ -181,6 +183,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        fileChooserBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(fileChooserBtn);
 
 
@@ -221,6 +224,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        songsBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(songsBtn);
 
 
@@ -260,6 +264,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        albumsBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(albumsBtn);
 
 /**
@@ -296,6 +301,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        EditBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(EditBtn);
 
 
@@ -341,6 +347,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        newPlaylistBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(newPlaylistBtn);
 
 
@@ -381,6 +388,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        playlistBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(playlistBtn);
 
 
@@ -430,6 +438,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        sharedPlaylistBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(sharedPlaylistBtn);
 
 
@@ -481,6 +490,7 @@ public class LibraryPart extends JPanel {
             public void mouseExited(MouseEvent e) {
             }
         });
+        favouriteBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(favouriteBtn);
 
 
