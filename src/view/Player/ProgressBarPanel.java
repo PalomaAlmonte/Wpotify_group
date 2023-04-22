@@ -23,17 +23,20 @@ public class ProgressBarPanel extends JPanel implements Runnable {
         this.setBackground(background);
 
         passed = new JTextField("00:00");
-        passed.setFont(new Font("Arial", Font.CENTER_BASELINE, 9));
+        passed.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        passed.setFont(new Font("San Francisco", Font.CENTER_BASELINE, 9));
         passed.setEditable(false);
         passed.setBackground(background);
         passed.setForeground(new Color(179, 179, 179));
         this.add(passed);
 
         progressBar = new JProgressBar(0, 0);
+        // creates an instance where the minimun is 0 and 0,used to later update
+        //the time length of the music depending on the music audio time
         progressBar.setStringPainted(false);
         progressBar.setBorderPainted(true);
         progressBar.addMouseListener(new MouseAdapter() {
-            @Override
+            @Override // this is an override of an already function built in
             public void mouseClicked(MouseEvent e) {
                 int mouseX = e.getX();
                 double percentage = (double) mouseX / (double) progressBar.getWidth();
@@ -48,6 +51,7 @@ public class ProgressBarPanel extends JPanel implements Runnable {
 
 
         total = new JTextField("00:00");
+        total.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         total.setFont(new Font("Arial", Font.CENTER_BASELINE, 9));
         total.setEditable(false);
         total.setBackground(background);

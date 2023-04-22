@@ -19,6 +19,7 @@ public class VolumeSliderPanel extends JPanel {
     public VolumeSliderPanel() {
         this.setBackground(new Color(40, 40, 40));
         slider = new JSlider();
+        slider.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         slider.setMinimum(0);
         slider.setMaximum(100);
         slider.setToolTipText("Volume");
@@ -42,7 +43,7 @@ public class VolumeSliderPanel extends JPanel {
         private final BasicStroke stroke = new BasicStroke(1f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 0f,
                 new float[]{1f}, 0f);
         private final Dimension thumbSize = new Dimension(20, 20);
-        private final Color thumbColor = new Color(255, 255, 255, 200);
+        private final Color thumbColor = new Color(75, 211, 45, 200);
         private final Color trackColor = new Color(200, 200, 200, 100);
 
         public CustomSliderUI(JSlider slider) {

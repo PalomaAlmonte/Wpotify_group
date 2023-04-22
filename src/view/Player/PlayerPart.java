@@ -259,7 +259,7 @@ public class PlayerPart extends JPanel {
             add(previous);
 
 
-            playOrPause = new JTextField("▶︎");
+            playOrPause = new JTextField("  ▶︎");
             playOrPause.setBackground(this.getBackground());
             playOrPause.setForeground(foreground);
             playOrPause.setEditable(false);
@@ -281,7 +281,7 @@ public class PlayerPart extends JPanel {
                     playOrPause.setBackground(background);
 
                     if (player != null) {
-                        if (playOrPause.getText().equals("▶︎")) {
+                        if (playOrPause.getText().equals(" ▶︎")) {
 
                             try {
 
@@ -302,12 +302,12 @@ public class PlayerPart extends JPanel {
                             } catch (JavaLayerException e1) {
                                 e1.printStackTrace();
                             }
-                            playOrPause.setText("∏");
+                            playOrPause.setText(" ||");
                             playOrPause.setToolTipText("Pause");
                         } else {
                             player.pause();
                             progressBarPanel.stop();
-                            playOrPause.setText("▶︎");
+                            playOrPause.setText(" ▶︎");
                             playOrPause.setToolTipText("Play");
                         }
 
@@ -354,7 +354,7 @@ public class PlayerPart extends JPanel {
                     if (playingSongs.size() != 0) {
 
                         player.pause();
-                        playOrPause.setText("▶︎");
+                        playOrPause.setText(" ▶︎");
                         playOrPause.setToolTipText("Play");
 
                         if (repeatOneIsOn) {

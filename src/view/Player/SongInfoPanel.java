@@ -26,8 +26,8 @@ public class SongInfoPanel extends JPanel {
 
         this.setLayout(new GridLayout(1, 2));
         this.setBackground(background);
-        this.font1 = new Font("Arial", Font.ITALIC, 10);
-        this.font2 = new Font("Arial", Font.BOLD, 8);
+        this.font1 = new Font("San Francisco", Font.ITALIC, 12);
+        this.font2 = new Font("San Francisco", Font.BOLD, 12);
 
         icon = new JLabel();
         icon.setHorizontalAlignment(SwingConstants.CENTER);
@@ -40,7 +40,7 @@ public class SongInfoPanel extends JPanel {
         this.add(icon);
 
         data = new JPanel();
-        data.setPreferredSize(new Dimension(80,10));
+        data.setPreferredSize(new Dimension(80,50));
         data.setLayout(new BorderLayout());
         data.setBackground(background);
 
