@@ -7,6 +7,7 @@ import view.Center.ShowPanel;
 import view.Player.PlayerPart;
 
 import javax.swing.*;
+import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.EditorKit;
 import java.awt.*;
@@ -122,7 +123,7 @@ public class LibraryPart extends JPanel {
         add(icon);
 
         Jpotify = new JLabel(JPOTIFY_LABEL);
-        Jpotify.setFont(new Font("Arial", Font.BOLD, 10));
+        Jpotify.setFont(new Font("San Francisco", Font.BOLD, 15));
         Jpotify.setForeground(foreground);
         Jpotify.setBackground(this.getBackground());
         Jpotify.setHorizontalAlignment(SwingConstants.CENTER);
@@ -134,8 +135,8 @@ public class LibraryPart extends JPanel {
         add(jSeparator);
 
 
-        libraryLabel = new JLabel("    LIBRARY      ");
-        libraryLabel.setFont(new Font("Arial", Font.CENTER_BASELINE, 9));
+        libraryLabel = new JLabel("   LIBRARY      ");
+        libraryLabel.setFont(new Font("San Francisco", Font.BOLD, 17));
         libraryLabel.setForeground(foreground);
         libraryLabel.setBackground(this.getBackground());
         add(libraryLabel);
@@ -144,7 +145,7 @@ public class LibraryPart extends JPanel {
  * This button is for adding a new song to the program
  */
         fileChooserBtn = new JTextField("   Add To Library");
-        fileChooserBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        fileChooserBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         fileChooserBtn.setEditable(false);
         fileChooserBtn.setBackground(this.getBackground());
         fileChooserBtn.setForeground(foreground);
@@ -165,6 +166,10 @@ public class LibraryPart extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 fileChooserBtn.setBackground(getBackground());
+                /*try {
+                    for (UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); //set Look and Feel to Windows
+                }*/
                 JFileChooser fileChooser = new JFileChooser();
                 fileChooser.setFileFilter(new FileNameExtensionFilter(".mp3 files", "mp3"));
                 fileChooser.setCurrentDirectory(new File("E:/"));
@@ -191,7 +196,7 @@ public class LibraryPart extends JPanel {
  * This button shows all existed songs according to last time played
  */
         songsBtn = new JTextField("   Songs");
-        songsBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        songsBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         songsBtn.setEditable(false);
         songsBtn.setBackground(this.getBackground());
         songsBtn.setForeground(foreground);
@@ -232,7 +237,7 @@ public class LibraryPart extends JPanel {
  * This button shows all albums according to last time played
  */
         albumsBtn = new JTextField("   Albums");
-        albumsBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        albumsBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         albumsBtn.setBackground(this.getBackground());
         albumsBtn.setForeground(foreground);
         albumsBtn.setEditable(false);
@@ -271,7 +276,7 @@ public class LibraryPart extends JPanel {
  * by clicking this button a new panel will be opened and user and choose what songs to be deleted from the program
  */
         EditBtn = new JTextField("   Edit");
-        EditBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        EditBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         EditBtn.setBackground(this.getBackground());
         EditBtn.setForeground(foreground);
         EditBtn.setEditable(false);
@@ -308,7 +313,7 @@ public class LibraryPart extends JPanel {
         add(Box.createRigidArea(new Dimension(0, 5)));
 
         playlistLabel = new JLabel("    PLAYLISTS");
-        playlistLabel.setFont(new Font("Arial", Font.CENTER_BASELINE, 9));
+        songsBtn.setFont(new Font("San Francisco", Font.BOLD, 17));
         playlistLabel.setForeground(foreground);
         playlistLabel.setBackground(this.getBackground());
         add(playlistLabel);
@@ -317,8 +322,8 @@ public class LibraryPart extends JPanel {
         /**
          * This button creates and adds a new playlist
          */
-        newPlaylistBtn = new JTextField("   ⨁ New Playlist");
-        newPlaylistBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        newPlaylistBtn = new JTextField("   + New Playlist");
+        newPlaylistBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         newPlaylistBtn.setEditable(false);
         newPlaylistBtn.setBackground(this.getBackground());
         newPlaylistBtn.setForeground(foreground);
@@ -356,7 +361,7 @@ public class LibraryPart extends JPanel {
  */
 
         playlistBtn = new JTextField("   Playlists");
-        playlistBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        playlistBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         playlistBtn.setEditable(false);
         playlistBtn.setBackground(this.getBackground());
         playlistBtn.setForeground(foreground);
@@ -396,7 +401,7 @@ public class LibraryPart extends JPanel {
  * This buttons shows user's shared playlist on network
  */
         sharedPlaylistBtn = new JTextField("   Shared Playlist");
-        sharedPlaylistBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        sharedPlaylistBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         sharedPlaylistBtn.setEditable(false);
         sharedPlaylistBtn.setBackground(this.getBackground());
         sharedPlaylistBtn.setForeground(foreground);
@@ -445,8 +450,8 @@ public class LibraryPart extends JPanel {
 /**
  * Every user has some favourite songs which is shown by this button
  */
-        favouriteBtn = new JTextField("   Favourites");
-        favouriteBtn.setFont(new Font("Arial", Font.BOLD, 9));
+        favouriteBtn = new JTextField("   Favorites");
+        favouriteBtn.setFont(new Font("San Francisco", Font.BOLD, 15));
         favouriteBtn.setEditable(false);
         favouriteBtn.setBackground(this.getBackground());
         favouriteBtn.setForeground(foreground);
