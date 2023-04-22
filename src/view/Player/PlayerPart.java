@@ -8,6 +8,7 @@ import model.Song;
 import network.client.FileClient;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -60,6 +61,8 @@ public class PlayerPart extends JPanel {
         pressedBackground = new Color(65, 65, 65);
         foreground = new Color(179, 179, 179);
 
+
+
         currentSong = 0;
         repeatOneIsOn = false;
         repeatAllIsOn = false;
@@ -75,6 +78,7 @@ public class PlayerPart extends JPanel {
             share.setForeground(foreground);
             share.setEditable(false);
             share.setToolTipText("Share");
+            share.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             share.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -126,6 +130,7 @@ public class PlayerPart extends JPanel {
             shuffle.setForeground(foreground);
             shuffle.setEditable(false);
             shuffle.setToolTipText("Shuffle On");
+            shuffle.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             shuffle.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -173,6 +178,7 @@ public class PlayerPart extends JPanel {
             previous.setForeground(foreground);
             previous.setEditable(false);
             previous.setToolTipText("Previous");
+            previous.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             previous.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -258,6 +264,7 @@ public class PlayerPart extends JPanel {
             playOrPause.setForeground(foreground);
             playOrPause.setEditable(false);
             playOrPause.setToolTipText("Play");
+            playOrPause.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             playOrPause.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -328,6 +335,7 @@ public class PlayerPart extends JPanel {
             next.setForeground(foreground);
             next.setEditable(false);
             next.setToolTipText("Next");
+            next.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             next.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -415,6 +423,7 @@ public class PlayerPart extends JPanel {
             repeat.setForeground(foreground);
             repeat.setEditable(false);
             repeat.setToolTipText("Repeat One");
+            repeat.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             repeat.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -467,6 +476,7 @@ public class PlayerPart extends JPanel {
             favorite.setForeground(foreground);
             favorite.setEditable(false);
             favorite.setToolTipText("Like");
+            favorite.setBorder(javax.swing.BorderFactory.createEmptyBorder());
             favorite.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {

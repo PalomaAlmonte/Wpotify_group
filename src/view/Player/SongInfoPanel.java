@@ -21,7 +21,7 @@ public class SongInfoPanel extends JPanel {
     public SongInfoPanel() {
 
         super();
-        background = new Color(255, 105, 180);
+        //background = new Color(255, 105, 180);
         foreground = Color.white;
 
         this.setLayout(new GridLayout(1, 2));

@@ -35,12 +35,13 @@ public class ProgressBarPanel extends JPanel implements Runnable {
         progressBar.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
                 int mouseX = e.getX();
-                int progressBarVal = (int) Math.round(((double) mouseX / (double) progressBar.getWidth()) * progressBar.getMaximum());
+                double percentage = (double) mouseX / (double) progressBar.getWidth();
+                int songDuration = progressBar.getMaximum();
+                int progressBarVal = (int) Math.round(percentage * songDuration);
                 progressBar.setValue(progressBarVal);
                 num = progressBarVal;
-                passed.setText("" + progressBar.getValue() / 60 + ":" + progressBar.getValue() % 60);
+                passed.setText("" + progressBarVal / 60 + ":" + progressBarVal % 60);
             }
         });
         this.add(progressBar);
@@ -69,11 +70,15 @@ public class ProgressBarPanel extends JPanel implements Runnable {
         this.isPlaying = false;
     }
 
-    public void iterate() {
 
+
+    private void iterate() {
         while (num < progressBar.getMaximum() && isPlaying == true) {
-            progressBar.setValue(num);
-            passed.setText("" + progressBar.getValue() / 60 + ":" + progressBar.getValue() % 60);
+            // update progress bar on the EDT (Event Dispatch Thread)
+            SwingUtilities.invokeLater(() -> {
+                progressBar.setValue(num);
+                passed.setText("" + progressBar.getValue() / 60 + ":" + progressBar.getValue() % 60);
+            });
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
